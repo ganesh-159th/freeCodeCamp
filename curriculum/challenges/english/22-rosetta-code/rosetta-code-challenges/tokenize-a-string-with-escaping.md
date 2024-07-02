@@ -63,11 +63,11 @@ assert(typeof tokenize('a', 'b', 'c') === 'object');
 `tokenize('one^|uno||three^^^^|four^^^|^cuatro|', '|', '^')` should return `['one|uno', '', 'three^^', 'four^|cuatro', '']`
 
 ```js
-console.log(tokenize(testStr1, '|', '^')); 
-console.log(tokenize(testStr2, '&', '@')); 
-console.log(tokenize(testStr3, '|', '^')); 
-console.log(tokenize(testStr4, '|', '^')); 
-console.log(tokenize(testStr5, '|', '^'));
+assert.deepEqual(tokenize(testStr1, '|', '^'), res1);
+assert.deepEqual(tokenize(testStr2, '&', '@'), res2);
+assert.deepEqual(tokenize(testStr3, '|', '^'), res3);
+assert.deepEqual(tokenize(testStr4, '|', '^'), res4);
+assert.deepEqual(tokenize(testStr5, '|', '^'), res5);
 ```
 
 `tokenize('a@&bcd&ef&&@@hi', '&', '@')` should return `['a&bcd', 'ef', '', '@hi']`
