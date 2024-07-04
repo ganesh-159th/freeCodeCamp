@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useTranslation } from 'react-i18next';
 
 interface TimelinePaginationProps {
@@ -16,7 +15,7 @@ const TimelinePagination = (props: TimelinePaginationProps): JSX.Element => {
   const { t } = useTranslation();
 
   return (
-    <nav aria-label='Timeline Pagination' role='navigation'>
+    <nav aria-label={t('aria.timeline-pagination-nav')}>
       <ul aria-hidden='true' className='timeline-pagination_list'>
         {totalPages > 10 && (
           <li
